@@ -1,0 +1,24 @@
+{
+	"name": "https://github.com/raulvfp/dropbox_api.git",
+	"description": "Clase para manejar la comunicación con DropBox desde VFP",
+	"authors": [
+		{
+			"name": "Raúl Juárez",
+			"email": "raul.jrz@gmail.com",
+			"homepage": "http://rauljrz.github.io/",
+			"role": "Developer"
+		}
+	],
+	"version": "0.1.0",
+	"require": {
+		"vfp": "^9.00",
+		"raulvfp/catchException": "1.0.*",
+		"raulvfp/ajaxRest": "1.0.*"
+    },
+	"repositories": [
+		{
+			"type": "socktoaster",
+			"url": "http://www.socktoaster.com"
+		}
+	]
+}
