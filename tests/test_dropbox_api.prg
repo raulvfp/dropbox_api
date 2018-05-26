@@ -19,7 +19,7 @@ DEFINE CLASS test_dropbox_api as FxuTestCase OF FxuTestCase.prg
 	FUNCTION Setup
 	* Configuración base de todos los Test de esta clase
 	*--------------------------------------------------------------------
-		*SET PATH TO pathraizdelprojecto
+		SET PATH TO pathraizdelprojecto
 		THIS.oldPath     =SET('PATH')
 		THIS.oldProcedure=SET('PROCEDURE')
 		THIS.oldDefault  =SET('DEFAULT')
@@ -29,6 +29,8 @@ DEFINE CLASS test_dropbox_api as FxuTestCase OF FxuTestCase.prg
 		*THIS.MessageOut('============================================================')
 
 		SET PROCEDURE TO (ADDBS(SYS(5)+CURDIR())+'src\dropbox_api.prg') ADDITIVE
+		SET PROCEDURE TO E:\Shared\Project\librery\ajaxRest\src\ajaxRest ADDITIVE
+		SET PROCEDURE TO E:\Shared\Project\librery\catchException\src\catchException ADDITIVE
 		SET PATH TO (THIS.oldPath +";"+ADDBS(SYS(5)+CURDIR())+'src')
 		THIS.MessageOut('Procedures: '+STRTRAN(SET("PROCEDURE"),";",CHR(13)+SPACE(12)))
 		THIS.MessageOut('Path......: '+STRTRAN(SET("PATH"),";",CHR(13)+SPACE(12)))
@@ -54,6 +56,21 @@ DEFINE CLASS test_dropbox_api as FxuTestCase OF FxuTestCase.prg
 		SET PROCEDURE TO (THIS.oldProcedure)
 		SET DEFAULT TO   (THIS.oldDefault)
 	ENDFUNC
+
+	*--------------------------------------------------------------------
+	FUNCTION testlistFolder_PrimeraPrueba
+	* Note:
+	*--------------------------------------------------------------------
+		LOCAL lcExpectedValue, lcResponseValue
+		lcExpectedValue = ''
+		lcResponseValue = ''
+
+		THIS.oObject.authorization='Bearer 2BaNplW-NkAAAAAAAAAACnD2uYsT9R8Kvoy0hg-BWunSrO2M4awBI75Ggf0FEb-d'
+		lcResponseValue = THIS.oObject.listFolder('')
+
+		THIS.MessageOut(lcResponseValue)
+	ENDFUNC
+
 
 ENDDEFINE
 *----------------------------------------------------------------------

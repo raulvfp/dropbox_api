@@ -1,23 +1,22 @@
 *
 *|--------------------------------------------------------------------------
-*| dropbox-api
+*| dropbox_api
 *|--------------------------------------------------------------------------
 *|
 *| Archivo principal del sistema
 *| Author......: Raúl Jrz (raul.jrz@gmail.com) 
 *| Created.....: 08.05.2018 - 19:46
-*| Purpose.....: 
+*| Purpose.....: Servir de ejemplo del uso de las API de DROPBOX
 *|
-*| Revisions...: 
+*| Revisions...: v1.00
 *|
 */
 *-----------------------------------------------------------------------------------*
 DEFINE CLASS dropbox_api AS ajaxRest
 *
 *-----------------------------------------------------------------------------------*
-	bRelanzarThrow = .T. &&Relanza la excepcion al nivel superior
+	PROTECTED bRelanzarThrow = .T. &&Relanza la excepcion al nivel superior
 	authorization  = ''
-*'Bearer 2BaNplW-NkAAAAAAAAAACnD2uYsT9R8Kvoy0hg-BWunSrO2M4awBI75Ggf0FEb-d'
 
 	*----------------------------------------------------------------------------*
 	FUNCTION listFolder (leValue)

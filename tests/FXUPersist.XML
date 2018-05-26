@@ -31,19 +31,19 @@
 	</xsd:schema>
 	<foxunitpersist>
 		<userid>Admin</userid>
-		<setting>THIS.Top = 135</setting>
+		<setting>THIS.Top = 83</setting>
 	</foxunitpersist>
 	<foxunitpersist>
 		<userid>Admin</userid>
-		<setting>THIS.Left = 389</setting>
+		<setting>THIS.Left = 293</setting>
 	</foxunitpersist>
 	<foxunitpersist>
 		<userid>Admin</userid>
-		<setting>THIS.Height = IIF(VERSION(5)&gt;=900,480,480)</setting>
+		<setting>THIS.Height = IIF(VERSION(5)&gt;=900,615,480)</setting>
 	</foxunitpersist>
 	<foxunitpersist>
 		<userid>Admin</userid>
-		<setting>THIS.Width = IIF(VERSION(5)&gt;=900,803,803)</setting>
+		<setting>THIS.Width = IIF(VERSION(5)&gt;=900,1026,803)</setting>
 	</foxunitpersist>
 	<foxunitpersist>
 		<userid>Admin</userid>
@@ -67,7 +67,7 @@
 	</foxunitpersist>
 	<foxunitpersist>
 		<userid>Admin</userid>
-		<setting>THIS.pgfDetails.ActivePage = 1</setting>
+		<setting>THIS.pgfDetails.ActivePage = 2</setting>
 	</foxunitpersist>
 	<foxunitpersist>
 		<userid>Admin</userid>
@@ -127,7 +127,7 @@
 	</foxunitpersist>
 	<foxunitpersist>
 		<userid>Admin</userid>
-		<setting>THIS.pgfDetails.pgMessages.FontBold = .F.</setting>
+		<setting>THIS.pgfDetails.pgMessages.FontBold = .T.</setting>
 	</foxunitpersist>
 	<foxunitpersist>
 		<userid>Admin</userid>
@@ -159,7 +159,7 @@
 	</foxunitpersist>
 	<foxunitpersist>
 		<userid>Admin</userid>
-		<setting>THIS.grdTests.COLUMN2.Width = 546</setting>
+		<setting>THIS.grdTests.COLUMN2.Width = 769</setting>
 	</foxunitpersist>
 	<foxunitpersist>
 		<userid>Admin</userid>
@@ -167,7 +167,7 @@
 	</foxunitpersist>
 	<foxunitpersist>
 		<userid>Admin</userid>
-		<setting>=SEEK("TEST_DROPBOX_API                                                                                              TESTEXISTEOBJECTO                                                                                                                 ",THIS.icGridRS,"TCLName")</setting>
+		<setting>=SEEK("TEST_DROPBOX_API                                                                                              TESTLISTFOLDER_PRIMERAPRUEBA                                                                                                      ",THIS.icGridRS,"TCLName")</setting>
 	</foxunitpersist>
 	<foxunitpersist>
 		<userid>Admin</userid>
