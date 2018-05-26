@@ -4,51 +4,37 @@ Clase para manejar las API de DropBox y poder enviar y recibir archivos
 
 * support: raul.jrz@gmail.com
 * url: [http://rauljrz.github.io/](http://rauljrz.github.io)
+* Comentarios en http://rinconfox.com
 
 
 ## Dependencies
-**None! There is no dependency!**
+https://github.com/raulvfp/ajaxRest
+    Extiendo esta clase usando todo su potencial.
+https://github.com/raulvfp/catchException
+    Para el control de las excepciones.
 
 ## Installation
-git clone https://github.com/raulvfp/catchException.git ajaxRest
-
+´´´
+git clone https://github.com/raulvfp/dropbox_api.git dropbox_api
+'''
 
 ## Usage
 **Properties:**
-- **None! There are no defined properties**
+- authorization: Propiedad en donde se configura el **access token**
 
 **Methods:**
-- init(bRelanzarThrow) : Es el unico metodo accesible. El metodo constructor.
-    + bRelanzarThrow: Booleano que indica si se relanza la excepcion con un THROW.
+- listFolder(cRootFolder) : Solicita un listado de Folder, tomando el parametro como raiz del listado
+    +return: string en formato json
 
 ## Example:
-1º - Este ejemplo no relanza la excepcion a nivel superior, sino que la controla en el bloque catch
-```
-    bRelanzarThrow = .F. &&NO Relanza la excepcion.
-    TRY 
-        *--- Este es una excepcion generada con THROW
-        THROW lcExpectedValue 
 
-    CATCH TO loEx
-        loTmp = CREATEOBJECT('catchException', bRelanzarThrow)
-        
-        THIS.MessageOut('Esto me indica si es un error o algo generador por el programador: ' +loEx.Message)
-        THIS.MessageOut('Valor de userValue: '+loEx.UserValue)
-    ENDTRY
+```
+    loDropBox = CREATEOBJECT('dropbox_api')
+    loDropBox.authorization='Bearer 2BaNplW-NkAAAAAAAAAACnD2uYsT9R8Kvoy0hg-BWunSrO2M4awBI75Ggf0FEb-d'
+    lcResponseValue = loDropBox.listFolder('')
+
+    ? lcResponseValue
 
 ```
 
-2º - Este ejemplo la execpcion es lanzada a un nivel superior para su control
-```
-    bRelanzarThrow = .T. &&Relanza la excepcion al nivel superior.
-    TRY 
-        *--- Este es una excepcion generada con THROW
-        THROW lcExpectedValue 
-
-    CATCH TO loEx
-        loTmp = CREATEOBJECT('catchException', bRelanzarThrow)
-        *-- No se ejecuta nada despues del CREATEOBJECT('catchException')
-    ENDTRY
-
-```
-
+http://rinconfox.com
