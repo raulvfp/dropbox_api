@@ -1,6 +1,10 @@
 # DropBox API
 
-Clase para manejar las API de DropBox y poder enviar y recibir archivos
+Clase para manejar las API de DropBox y poder enviar y recibir archivos.
+Documentación en:
+https://goo.gl/6jDAaK (Como obtener Access Token)
+https://goo.gl/Uwyck3 (Cuales son los EndPoint)
+https://goo.gl/TAoT7T (Ejemplo de Codigo en VFP)
 
 * support: raul.jrz@gmail.com
 * url: [http://rauljrz.github.io/](http://rauljrz.github.io)
