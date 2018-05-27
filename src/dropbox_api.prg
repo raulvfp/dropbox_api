@@ -15,7 +15,8 @@
 DEFINE CLASS dropbox_api AS ajaxRest
 *
 *-----------------------------------------------------------------------------------*
-	PROTECTED bRelanzarThrow = .T. &&Relanza la excepcion al nivel superior
+	PROTECTED bRelanzarThrow
+	bRelanzarThrow = .T. &&Relanza la excepcion al nivel superior
 	authorization  = ''
 
 	*----------------------------------------------------------------------------*
