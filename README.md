@@ -22,19 +22,20 @@ https://github.com/raulvfp/catchException
     Para el control de las excepciones.
 
 ## Installation
-'''
+```
 git clone https://github.com/raulvfp/dropbox_api.git dropbox_api
-'''
+```
 
-##Properties 
+## Properties 
 - authorization: Propiedad en donde se configura el **access token**
 
-##Methods Auxiliares:
+## Methods Auxiliares:
 - isSuccess()  : Devuelve .T. si tuvo exito la última operación, de lo contrario .F.
 - isError()    : Devuelve .T. si tuvo error la última operación, de lo contrario .F.
 - getMsgError(): Si la última operación dio error, contiene el Mensaje de Error, de lo contrario .null.
 - getResponse(): Devuelve la cadena cruda devuelta desde DropBox.
 - getElement() : Si fue satisfactoria la última operación, contiene un objeto con los datos del archivo o carpeta
+```
 		loElement = loDropBox.getElement()
 		? 'File id........: '+loElement.get("id")
 		? 'File Name......: '+loElement.get("name")
@@ -43,27 +44,28 @@ git clone https://github.com/raulvfp/dropbox_api.git dropbox_api
 		? 'server_modified: '+loElement.get("server_modified")
 		? 'tag............: '+loElement.get("tag")
 		? 'File size......: '+TRANSFORM(loElement.get("size"))
+```
 
-##Methods Principales:
+## Methods Principales:
 - listFolder(cRootFolder) : Solicita un listado del contenido de un Folder.
-	+parameter: El path completo de la carpeta en DropBox.
+    +parameter: El path completo de la carpeta en DropBox.
     +return...: Si tuvo exito, devuelve un objeto con los datos de los archivos y carpetas contenidos en el path.
-	            De lo contrario, devuelve .null.
+                De lo contrario, devuelve .null.
 
 ** Example: **
 
 ```
-    loDropBox = CREATEOBJECT('dropbox_api')
-    loDropBox.authorization='Bearer 2BaNplW-NkAAAAAAAAAACnD2uYsT9R8Kvoy0hg-BWunSrO2M4awBI75Ggf0FEb-d'
+	loDropBox = CREATEOBJECT('dropbox_api')
+	loDropBox.authorization='Bearer 2BaNplW-NkAAAAAAAAAACnD2uYsT9R8Kvoy0hg-BWunSrO2M4awBI75Ggf0FEb-d'
     
-    oResponse = loDropBox.listFolder('/Apps/myFolder/')
+	oResponse = loDropBox.listFolder('/Apps/myFolder/')
 
-    IF loDropBox.isSuccess() THEN   &&Evaluo si tuvo exito
+	IF loDropBox.isSuccess() THEN   &&Evaluo si tuvo exito
 		FOR lnInd = 1 TO oResponse.nSIZE
 			loElement = oResponse.GET(lnInd)
 			?'Element n'+TRANSFORM(lnInd)+': ';
-					+loElement.GET("path_display")   +'| ';
-					+loElement.GET("tag")
+				+loElement.GET("path_display")   +'| ';
+				+loElement.GET("tag")
 		ENDFOR
 	ELSE
 		? 'Error: ' + loDropBox.getMsgError()
