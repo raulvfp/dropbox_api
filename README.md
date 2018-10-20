@@ -28,6 +28,9 @@ git clone https://github.com/raulvfp/dropbox_api.git dropbox_api
 
 ## Properties 
 - authorization: Propiedad en donde se configura el **access token**
+```
+	loDropBox.authorization='Bearer 2BaNplW-NkAAAAAAAAAACnD2uYsT9R8Kvoy0hg-BWunSrO2M4awBI75Ggf0FEb-d'
+```
 
 ## Methods Auxiliares:
 - isSuccess()  : Devuelve .T. si tuvo exito la última operación, de lo contrario .F.
@@ -47,12 +50,12 @@ git clone https://github.com/raulvfp/dropbox_api.git dropbox_api
 ```
 
 ## Methods Principales:
-- listFolder(cRootFolder) : Solicita un listado del contenido de un Folder.
+**listFolder**(cRootFolder) : Solicita un listado del contenido de un Folder.
     +parameter: El path completo de la carpeta en DropBox.
     +return...: Si tuvo exito, devuelve un objeto con los datos de los archivos y carpetas contenidos en el path.
                 De lo contrario, devuelve .null.
 
-** Example: **
+**Example:**
 
 ```
 	loDropBox = CREATEOBJECT('dropbox_api')
