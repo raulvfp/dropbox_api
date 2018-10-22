@@ -52,7 +52,7 @@ git clone https://github.com/raulvfp/dropbox_api.git dropbox_api
 ## Methods Principales:
 - **listFolder**(cRootFolder) : Solicita un listado del contenido de un Folder.
     + Parámetros: El path completo de la carpeta en DropBox.
-    + Retorna...: Si tuvo exito, devuelve un objeto con los datos de los archivos y carpetas contenidos en el path.De lo contrario, devuelve .null.
+    + Retorna.....: Si tuvo exito, devuelve un objeto con los datos de los archivos y carpetas contenidos en el path. De lo contrario, devuelve .null.
 		
 
   **Example:**
