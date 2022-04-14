@@ -18,10 +18,13 @@ https://goo.gl/TAoT7T (Ejemplo de Codigo en VFP)
 ## Dependencies
 https://github.com/raulvfp/ajaxRest
     Extiendo esta clase usando todo su potencial.
+    
 https://github.com/raulvfp/catchException
     Para el control de las excepciones.
+    
 https://github.com/raulvfp/vfpjson
-    Para la gestion de los datos en formato json
+    Para la gestion de los datos en formato json.
+    
 
 ## Installation
 ```
